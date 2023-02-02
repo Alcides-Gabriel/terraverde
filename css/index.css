@@ -1,0 +1,384 @@
+.grid-somos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 2;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.img-somos {
+  grid-column: 1;
+  grid-row: 2;
+  background-image: url("../img/forest.jpg");
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 25px 0 25px;
+}
+
+.grid-somos h1 {
+  font-size: 3rem;
+  color: var(--cor-3);
+  grid-column: -1/1;
+  grid-row: 1;
+}
+
+.grid-somos p {
+  grid-column: 2;
+  grid-column: 2;
+  font-family: "Roboto";
+  line-height: 1.5;
+  text-align: left !important;
+}
+
+.areas-protegidas-bg {
+  background-color: var(--cor-2);
+}
+
+.protegidas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  transition: 0.3s;
+}
+
+.areas-protegidas-bg h1 {
+  color: var(--cor-3);
+  font-size: 3rem;
+  text-align: right;
+}
+.areas-protegidas-bg p {
+  margin-bottom: 70px;
+  text-align: right;
+}
+.img-area {
+  width: 350px;
+  height: 350px;
+  margin-bottom: 5px;
+}
+
+.img-area img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.img-area:hover img {
+  transform: scale(1.05);
+}
+
+.area-floresta::after {
+  content: "";
+  height: 200px;
+  max-width: 350px;
+  display: block;
+}
+
+.area-floresta .img-area:hover::after {
+  content: "A ONG TerraVerde luta pela preservação de florestas, plantando árvores e combate ao desmatamento. Juntos, protegemos a biodiversidade e o equilíbrio do meio ambiente.";
+  height: 200px;
+  max-width: 350px;
+  animation: areaHover 0.5s forwards;
+  text-align: justify;
+  position: relative;
+  top: 45px;
+  display: block;
+}
+
+.area-oceano::after {
+  content: "";
+  height: 200px;
+  max-width: 350px;
+  display: block;
+}
+
+.area-oceano .img-area:hover::after {
+  content: "A ONG TerraVerde trabalha para a conservação dos oceanos, combatendo a poluição e promovendo a pesca sustentável. Juntos, preservamos as espécies marinhas e o equilíbrio dos ecossistemas oceânicos.";
+  height: 200px;
+  max-width: 350px;
+  animation: areaHover 0.5s forwards;
+  text-align: justify;
+  position: relative;
+  top: 45px;
+  display: block;
+}
+.area-geleira::after {
+  content: "";
+  height: 200px;
+  max-width: 350px;
+  display: block;
+}
+
+.area-geleira .img-area:hover::after {
+  content: "A ONG TerraVerde atua na proteção das geleiras, lutando contra as mudanças climáticas e a perda de massa de gelo. Juntos, garantimos a preservação dessas importantes fontes de água e o equilíbrio do clima global.";
+  height: 200px;
+  max-width: 350px;
+  animation: areaHover 0.5s forwards;
+  text-align: justify;
+  position: relative;
+  top: 45px;
+  display: block;
+}
+
+@keyframes areaHover {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.depoimentos-bg h1 {
+  font-size: 3rem;
+  color: var(--cor-1);
+}
+
+.depoimentos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.depoimento {
+  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--cor-2);
+  border-radius: 25px 0 25px 0;
+  padding: 25px;
+}
+
+.depoimento p {
+  max-width: 200px;
+  font-size: 0.7rem;
+}
+
+.depoimento-foto {
+  height: 100px;
+  width: 100px;
+}
+
+.depoimento-foto img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.secao-formulario-bg {
+  background-color: var(--cor-5);
+}
+
+.secao-formulario {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  place-items: center;
+}
+
+.secao-formulario-bg h1 {
+  font-size: 3rem;
+  color: var(--cor-3);
+}
+
+.folha {
+  width: 400px;
+  height: 400px;
+  background: url("../img/plant.png");
+  background-size: contain;
+}
+
+.area-formulario label,
+.area-formulario input {
+  display: block;
+}
+
+.area-formulario label {
+  margin-bottom: 3px;
+  color: var(--cor-6);
+  font-weight: 500;
+}
+
+.area-formulario input {
+  height: 35px;
+  width: 350px;
+  background-color: var(--cor-7);
+  border: 1px solid var(--cor-4);
+  outline: none;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 0 10px 0 10px;
+}
+
+.area-formulario textarea {
+  width: 350px;
+  outline: none;
+  background-color: var(--cor-7);
+  border: 1px solid var(--cor-4);
+  border-radius: 0 10px 0 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.area-formulario textarea::placeholder {
+  color: black;
+  opacity: 0.7;
+}
+
+.input-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+.area-formulario input[type="radio"] {
+  background-color: black;
+}
+
+.area-formulario input[name="sexo"] {
+  display: inline;
+  width: 15px;
+}
+
+.area-formulario {
+  text-align: center;
+}
+
+.area-formulario button {
+  display: inline;
+  text-transform: uppercase;
+  background-color: var(--cor-3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: 0.5s;
+  justify-self: center;
+}
+
+.area-formulario button:hover {
+  background-color: var(--cor-7);
+}
+
+@media (max-width: 1227px) {
+  .area-floresta::after {
+    content: "A ONG TerraVerde luta pela preservação de florestas, plantando árvores e combate ao desmatamento. Juntos, protegemos a biodiversidade e o equilíbrio do meio ambiente.";
+    height: 200px;
+    max-width: 350px;
+    text-align: justify;
+  }
+
+  .area-oceano::after {
+    content: "A TerraVerde trabalha para a conservação dos oceanos, combatendo a poluição e promovendo a pesca sustentável. Juntos, preservamos as espécies marinhas e o equilíbrio dos ecossistemas oceânicos.";
+    height: 200px;
+    max-width: 350px;
+    text-align: justify;
+  }
+  .area-geleira::after {
+    content: "A ONG TerraVerde atua na proteção das geleiras, lutando contra as mudanças climáticas e a perda de massa de gelo. Juntos, garantimos a preservação dessas importantes fontes de água e o equilíbrio do clima global.";
+    height: 200px;
+    max-width: 350px;
+    text-align: justify;
+  }
+  .area-floresta .img-area:hover::after {
+    display: none;
+  }
+
+  .area-oceano .img-area:hover::after {
+    display: none;
+  }
+  .area-geleira .img-area:hover::after {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .folha {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 825px) {
+  h1.ponto,
+  h1.ponto + p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .folha {
+    display: none;
+  }
+
+  .secao-formulario {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 660px) {
+  .img-somos {
+    width: 100px;
+  }
+
+  .grid-somos {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+@media (max-width: 438px) {
+  .depoimento {
+    place-content: center;
+  }
+
+  .area-formulario input,
+  .area-formulario textarea {
+    width: 300px;
+  }
+
+  .img-somos {
+    width: 60px;
+  }
+}
+
+@media (max-width: 518px) {
+  h1.ponto {
+    font-size: 2.5rem;
+  }
+
+  .img-area {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .area-formulario input,
+  .area-formulario textarea {
+    width: 250px;
+  }
+}

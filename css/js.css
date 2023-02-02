@@ -1,0 +1,23 @@
+.menu-header a.link-ativo::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--cor-3);
+  display: block;
+  animation: barraMenu 0.3s forwards;
+}
+
+.ativo {
+  animation: animarScroll 1.5s forwards;
+}
+
+@keyframes animarScroll {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,36 @@
+@import "header.css";
+@import "cores.css";
+@import "index.css";
+@import "footer.css";
+@import "sobre.css";
+@import "contato.css";
+@import "js.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.container800 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.ponto::after {
+  content: ".";
+  font-size: 3rem;
+  color: var(--cor-4);
+}
+@media (max-width: 1250px) {
+  .container {
+    padding: 50px 30px;
+  }
+}
